@@ -1,0 +1,41 @@
+.title {
+	margin-right: 10px;
+}
+
+.title,
+.dropdown {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button.dropdown-toggle {
+	position: relative;
+	padding: 4px 12px;
+	min-width: 180px;
+	border-radius: 0;
+	text-align: left;
+	font-size: 16px;
+	line-height: 20px;
+	background: #e7e7e7;
+	cursor: pointer;
+
+	&:hover {
+		background: #fff;
+	}
+
+	&:after {
+		position: absolute;
+		top: 7px;
+		right: 10px;
+		border-top: 12px solid #898989;
+		border-right: 8px solid transparent;
+		border-bottom: 12px solid transparent;
+		border-left: 8px solid transparent;
+	}
+}
+
+.dropdown-item {
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+}

@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr>
+			<td [ngClass] = 'countryClass' (click)="sortByName()">Country</td>
+			<td [ngClass] = 'quantityClass' (click)="sortByQuantity()">Quantity</td>
+			<td [ngClass] = 'rmcClass' (click)="sortByRMC()">RMC</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of allCountries;" (click)="showPopup(item)">
+			<td>
+				<span>{{ item.name }}</span>
+			</td>
+			<td>
+				<span>{{ item.quantity }}</span>
+			</td>
+			<td>
+				<span>{{ item.rmc }}</span>
+			</td>
+		</tr>
+	</tbody>
+</table>

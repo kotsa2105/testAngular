@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="test-info">
+	<div class="wrapper">
+		<div class="drop-wrapper-block">
+			<div class="drop-wrapper">
+				<app-dropdown-countries [names] = 'countryNames' (searchCountries)="searchCountries($event)"></app-dropdown-countries>
+			</div>
+			<div class="drop-wrapper">
+				<app-dropdown-rmc [rmcs] = 'countryRMC' (searchRMC)="searchRMC($event)"></app-dropdown-rmc>
+			</div>
+		</div>
+		<app-countries [allCountries] = 'countries' (sortCountries)="sortByName($event)" (sortQuantities)="sortByQuantity($event)" (sortRMC)="sortByRMC($event)" (showInfo)="showPopup($event)"></app-countries>
+		<app-popup [info] = 'popupInfo' (hidePopup)="hidePopup($event)"></app-popup>
+	</div>
+</div>
